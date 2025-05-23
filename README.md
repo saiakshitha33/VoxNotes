@@ -1,6 +1,37 @@
-**VoxNotes**
-Upload any meeting recording and receive a speaker-tagged transcript + concise bullet summary in your inbox within minutes.
+# 📣 VoxNotes
 
-Project Description
-VoxNotes is a lightweight end-to-end application that turns raw voice conversations into actionable knowledge. An asynchronous FastAPI endpoint ingests audio (.mp3, .wav, .m4a), runs CPU-friendly speech-to-text with speaker diarisation, distills the transcript via an LLM prompt chain, stores artifacts in SQLite, and emails the results to the requester. The stack is container-ready and deploys comfortably on a single-vCPU instance.
+**Upload any meeting recording and receive a speaker-tagged transcript _plus_ a concise bullet-summary in your inbox within minutes.**
 
+---
+
+
+Teams lose hours re-listening to calls or skimming clunky transcripts. VoxNotes turns raw voice into _actionable knowledge_ with one HTTPS request:
+
+|  What you get | ⚙ How it happens |
+|-----------------|------------------|
+| **Speaker-labelled transcript** (`.srt`) | WhisperX ASR + diarisation |
+| **TL;DR bullet summary** | GPT-4o via LangChain prompt-chain |
+| **Instant e-mail delivery** | AioSMTP over TLS |
+| **Audit trail** | Job metadata & artifacts in SQLite |
+
+All of this runs happily on a 1 vCPU box—no GPU required.
+
+---
+
+##  High-level Flow
+
+```text
+[ Client ]  ──►  POST /upload
+                    │
+                    ▼
+              FastAPI BackgroundTask
+                    │
+                    ▼
+        ┌─ WhisperX ASR  ─ diarise ─►  speaker.srt
+        │
+ [ SQLite ] ◄────────────┤
+        │                ▼
+        └─ GPT-4o summary  ◄─ transcript.txt
+                    │
+                    ▼
+              E-mail via AioSMTP
