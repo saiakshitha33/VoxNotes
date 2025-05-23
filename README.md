@@ -1,4 +1,4 @@
-# 📣 VoxNotes
+#  VoxNotes
 
 **Upload any meeting recording and receive a speaker-tagged transcript _plus_ a concise bullet-summary in your inbox within minutes.**
 
