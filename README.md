@@ -9,7 +9,7 @@ Teams lose hours re-listening to calls or skimming clunky nscripts. VoxNotes tur
 
 |  What you get | ⚙ How it happens||
 |-----------------|------------------|
-| **Speaker-labelled transcript** (`.srt`) | WhisperX ASR + diarisation |
+| **Speaker-labelled transcript** (`.srt`) | WhisperXSR + diarisation |
 | **TL;DR bullet summary** | GPT-4o via LangChain prompt-chain |
 | **Instant e-mail delivery** | AioSMTP over TLS |
 | **Audit trail** | Job metadata & artifacts in SQLite |
