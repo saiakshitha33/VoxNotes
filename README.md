@@ -5,9 +5,9 @@
 ---
 
 
-Teams lose hours re-listening to calls or skimming clunky transcripts. VoxNotes turns raw voice into _actionable knowledge_ with one HTTPS request:
+Teams lose hours re-listening to calls or skimming clunky nscripts. VoxNotes turns raw voice into _ionable knowledge_ with one HTTPS request:
 
-|  What you get | ⚙ How it happens |
+|  What you get | ⚙ How it happens
 |-----------------|------------------|
 | **Speaker-labelled transcript** (`.srt`) | WhisperX ASR + diarisation |
 | **TL;DR bullet summary** | GPT-4o via LangChain prompt-chain |
