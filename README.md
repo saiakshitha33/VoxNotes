@@ -5,7 +5,7 @@
 ---
 
 
-Teams lose hours e-listening to calls or skimming clunky nscripts. VoxNotes turns raw voice o _ionable knowledge_ with one HTTPS request:
+Teams lose hours e-listeni to calls or skimming clunky nscripts. VoxNotes turns raw voice o _ionable knowledge_ with one HTTPS request:
 
 |  What you get | ⚙ How it happens||
 |-----------------|------------------|
